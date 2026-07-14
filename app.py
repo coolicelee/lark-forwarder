@@ -13,7 +13,9 @@ import string
 WS_PORT = int(os.getenv("PORT", 8080))
 
 # 从 Render 环境变量中读取您的云数据库（如 Supabase 或 Neon）连接串
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = "postgresql://larkmessage_user:XiMjKlzhLdhDfhw0q3oJ5AHNVHoaECfj@dpg-d9b18ptaeets73a3qesg-a/larkmessage"
+
+#os.getenv("DATABASE_URL") or os.getenv("EXTERNAL_DATABASE_URL")
 
 APP_ID = "cli_aacce5eec378de15" 
 APP_SECRET = "FixMfrXIanGxZu4lX0AgDbtDfahQcbWR" 
