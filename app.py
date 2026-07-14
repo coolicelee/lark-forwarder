@@ -86,7 +86,7 @@ async def flush_backlog(client_id, ws):
     if not DATABASE_URL: return
     
     # 建立数据库会话连接
-    with psycopg2.connect(DATABASE_URL) as conn:
+    with psycopg2.connect(dsn=DATABASE_URL) as conn:
         with conn.cursor() as cursor:
             # 注意：PostgreSQL 占位符统一使用 %s 替换原 sqlite3 的 ?
             cursor.execute('SELECT id, event_data FROM backlog_events WHERE client_id = %s ORDER BY id ASC', (client_id,))
