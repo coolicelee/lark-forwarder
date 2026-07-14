@@ -1,0 +1,4 @@
+aiaiohttp
+requests
+httpx
+psycopg2-binary
