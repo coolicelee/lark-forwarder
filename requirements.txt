@@ -1,4 +1,4 @@
-aiaiohttp
+aiohttp
 requests
 httpx
 psycopg2-binary
